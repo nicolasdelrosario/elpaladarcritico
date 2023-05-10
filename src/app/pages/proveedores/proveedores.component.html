@@ -1,0 +1,30 @@
+<header id="page-header">
+  <div class="container">
+    <h1>Proovedores</h1>
+    <p>{{ message }}</p>
+  </div>
+</header>
+<section class="padded">
+  <div class="container">
+    <table class="table table-bordered table-hover">
+      <thead>
+        <th>Empresa</th>
+        <th>Contacto</th>
+        <th>Cargo</th>
+        <th>Pais</th>
+        <th>Ciudad</th>
+        <th>Teléfono</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of listaProveedores">
+          <td>{{item.nombreempresa}}</td>
+          <td>{{item.nombrecontacto}}</td>
+          <td>{{item.cargocontacto}}</td>
+          <td>{{item.pais}}</td>
+          <td>{{item.ciudad}}</td>
+          <td>{{item.telefono}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

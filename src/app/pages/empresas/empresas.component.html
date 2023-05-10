@@ -1,0 +1,29 @@
+<header id="page-header">
+  <div class="container">
+    <h1>Empresas que nos apoyan</h1>
+  </div>
+</header>
+<section class="padded">
+  <div class="container text-center">
+    <table class="table table-bordered table-hover">
+      <thead>
+        <th class="p-2 empresa-th">Empresa</th>
+        <th class="p-2 empresa-th">Contacto</th>
+        <th class="p-2 empresa-th">Cargo</th>
+        <th class="p-2 empresa-th">Pais</th>
+        <th class="p-2 empresa-th">Ciudad</th>
+        <th class="p-2 empresa-th">Teléfono</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of listaEmpresas">
+          <td>{{item.empresa}}</td>
+          <td>{{item.nombres}}</td>
+          <td>{{item.cargo}}</td>
+          <td>{{item.pais}}</td>
+          <td>{{item.ciudad}}</td>
+          <td>{{item.telefono}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

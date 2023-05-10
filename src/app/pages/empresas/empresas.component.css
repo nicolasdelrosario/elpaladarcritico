@@ -1,0 +1,5 @@
+.empresa-th {
+  background-color: var(--color1);
+  color: var(--color-blanco);
+  border: 1px solid var(--color-gris-claro);
+}

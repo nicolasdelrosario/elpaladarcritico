@@ -1,1 +1,78 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --color1: #FAA61A;
+  --color2: #2B2D42;
+  --color3: #8D99AE;
+  --color4: #F0F3BD;
+  --color5: #D8315B;
+  --color-blanco: #FFFFFF;
+  --color-negro: #000000;
+  --color-gris-claro: #CCCCCC;
+  --color-gris-oscuro: #333333;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 48px;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  padding-top: 10px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 36px;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--color1);
+}
+
+#page-header {
+  background-color: var(--color-gris-claro);
+  padding: 15px 0;
+}
+
+#main-header{
+  background-color: var(--color1);
+  color: var(--color-blanco);
+}
+
+#main-header p {
+  margin: 0;
+}
+#nosotros{
+  background-color: var(--color2);
+  color: var(--color-blanco);
+}
+#noticias{
+  background-color: var(--color-gris-oscuro);
+  color: var(--color-blanco);
+}
+
+
+#main-footer {
+  background-color: var(--color2);
+  color: var(--color-gris-claro);
+  padding: 45px 0;
+}
+
+
+.padded{
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+
+@media (min-width: 1680px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1600px;
+  }
+}
