@@ -8,7 +8,12 @@ import { EmpresasService } from 'src/app/services/empresas.service';
   styleUrls: ['./empresas.component.css']
 })
 export class EmpresasComponent {
-  listaEmpresas: Empresa[] | undefined;
+  listaEmpresas: Empresa[] = [];
+
+  clientesFilter: any = { empresa: '' };
+  p: number = 1;
+  order: string = 'empresa';
+  reversa: boolean = false;
 
   constructor(private empresasService: EmpresasService){}
 
@@ -19,5 +24,14 @@ export class EmpresasComponent {
         this.listaEmpresas = JSON.parse(JSON.stringify(res));
       }
     )
+  }
+
+  setOrder(nombreColumna: string) {
+    if(this.order === nombreColumna) {
+      this.reversa = !this.reversa
+    }  else {
+      this.reversa = false;
+    }
+    this.order = nombreColumna
   }
 }

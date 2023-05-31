@@ -6,14 +6,17 @@ import { ProveedoresComponent } from './pages/proveedores/proveedores.component'
 import { EmpleadosComponent } from './pages/empleados/empleados.component';
 import { TiendaComponent } from './pages/tienda/tienda.component';
 import { EmpresasComponent } from './pages/empresas/empresas.component';
+import { CarritoComponent } from './pages/carrito/carrito.component';
 
 const routes: Routes = [
   {path:'', component:InicioComponent},
   {path:'proyectos', component:ProyectosComponent},
-  {path: 'empresas', component:EmpresasComponent},
+  //Clientes
+  {path: 'clientes', component:EmpresasComponent},
   {path:'proovedores', component:ProveedoresComponent},
   {path:'empleados', component:EmpleadosComponent},
-  {path:'tienda', component:TiendaComponent}
+  {path:'tienda', component:TiendaComponent},
+  {path:'carrito', component:CarritoComponent}
 ];
 
 @NgModule({

@@ -3,3 +3,11 @@
   color: var(--color-blanco);
   border: 1px solid var(--color-gris-claro);
 }
+
+th span {
+  visibility: hidden;
+}
+
+th.order-active span{
+  visibility: visible;
+}

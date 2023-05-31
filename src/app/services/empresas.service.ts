@@ -9,6 +9,7 @@ export class EmpresasService {
   constructor(private http: HttpClient) { }
 
   empleadosSelect() {
+    //CLientes
     const ruta = "https://servicios.campus.pe/servicioclientes.php";
     return this.http.get(ruta);
   }

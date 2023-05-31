@@ -10,7 +10,11 @@ import { ProovedoresService } from 'src/app/services/proovedores.service';
 })
 export class ProveedoresComponent {
   message = "I just know that I know nothing.";
-  listaProveedores: Proveedor[] | undefined;
+  listaProveedores: Proveedor[] = [];
+  proveedoresFilter: any = { nombreempresa: '' };
+  p: number = 1;
+  order: string = 'nombreempresa';
+  reversa: boolean = false;
 
   constructor(private proovedoresService: ProovedoresService){}
 
@@ -21,5 +25,14 @@ export class ProveedoresComponent {
         this.listaProveedores = JSON.parse(JSON.stringify(res));
       }
     )
+  }
+
+  setOrder(nombreColumna: string) {
+    if(this.order === nombreColumna) {
+      this.reversa = !this.reversa;
+    } else {
+      this.reversa = false;
+    }
+    this.order = nombreColumna
   }
 }
